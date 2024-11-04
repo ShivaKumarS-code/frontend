@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 import { easeInOut, motion } from 'framer-motion';
-import logo from '../images/logo.png';
+import logo from '../../images/logo.png';
 import { FaRegUserCircle } from "react-icons/fa";
 import { RiLockPasswordFill } from "react-icons/ri";
 import { useState } from 'react';
@@ -61,16 +61,26 @@ import StudentSignUp from './StudentSignUp';
                 <span className='text-black'>Link</span></h1>
                 <GiTeacher className='absolute text-3xl text-white left-[320px] top-[20px]' />
            </div>
-        <div className='w-[200px]  bg-white border border-black absolute rounded-full top-[100px] left-[890px] flex justify-center items-center'>
-           <button className={`${color1} w-[100px] ${text1} transition-colors duration-300 ease-linear rounded-full`} onClick={handleClick1}>Faculty</button>
-           <button className={`${color2} w-[100px] ${text2} transition-colors duration-300 ease-linear rounded-full`} onClick={handleClick2}>Student</button>
-        </div>
          <div className='w-[400px] h-[200px] left-[340px] translate-y-[30px]  absolute flex justify-center items-center flex-col'> 
           <h1 className='text-white mb-2 text-lg'>Have an Account? Click here to Login!</h1>
-           <button onClick={()=> handleView('login')} className= 'backdrop-blur-3xl shadow-sm shadow-black hover:scale-110 duration-300  ease-linear text-white w-[200px] rounded-full  pl-3 pr-3 pt-2 pb-2 ' >Login</button>
+           <button onClick={()=> handleView('login')} className= 'backdrop-blur-3xl hover:bg-black shadow-sm shadow-black hover:scale-110 duration-300  ease-linear text-white w-[200px] rounded-full  pl-3 pr-3 pt-2 pb-2 ' >Login</button>
          </div> 
         <div id='side1' className='w-[50%] h-[600px] rounded-l-lg bg-gradient-to-r from-pink-300 to-purple-400'></div>
-        <div className='bg-white rounded-r-lg w-[50%] h-[600px]'> 
+        <div className='bg-white rounded-r-lg w-[50%] h-[600px] relative'> 
+        <div className='w-[200px] bg-white border border-black absolute rounded-full top-[40px] left-[127px] flex justify-center items-center'>
+            <button
+              className={`${color1} w-[100px] ${text1} transition-colors duration-300 ease-linear rounded-full`}
+              onClick={handleClick1}
+            >
+              Faculty
+            </button>
+            <button
+              className={`${color2} w-[100px] ${text2} transition-colors duration-300 ease-linear rounded-full`}
+              onClick={handleClick2}
+            >
+              Student
+            </button>
+          </div>
           <div className='w-full h-full translate-y-[70px]'>
            <div className='flex justify-center mt-7 '>
             <motion.img src={logo} 
@@ -95,7 +105,7 @@ import StudentSignUp from './StudentSignUp';
               <input type={passwordType} value={pass} onChange={(e) => setPass(e.target.value)} placeholder='Password' className='border border-gray-400 p-2 w-[300px] pl-7 mb-7' />
               <input type="checkbox" onClick={handlePass} className='absolute left-[80px] translate-y-[57px]'/>
               <label htmlFor="pass" className='absolute left-[95px] translate-y-[56px]'>Show Password</label>
-              <button type='submit' className='bg-red-400 border shadow-sm shadow-black hover:scale-110 duration-300  ease-linear rounded-3xl pl-3 pr-3 pt-2 pb-2 w-[100px] translate-x-[100px] '>SIGN UP</button>
+              <button type='submit' className='bg-red-400 hover:bg-black hover:text-white border shadow-sm shadow-black hover:scale-110 duration-300  ease-linear rounded-3xl pl-3 pr-3 pt-2 pb-2 w-[100px] translate-x-[100px] '>SIGN UP</button>
              </div>
            </form>
            </div>

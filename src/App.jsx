@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import FacultyLogin from './components/FacultyLogin';
-import StudentLogin from './components/StudentLogin'; // Make sure to import this if you have a student login component
+import FacultyLogin from './components/login/FacultyLogin';
 import StudentDash from './components/dashboard/StudentDash';
 import FacultyDash from './components/dashboard/FacultyDash';
 
